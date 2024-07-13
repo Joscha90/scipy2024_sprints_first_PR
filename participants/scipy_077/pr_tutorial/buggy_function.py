@@ -10,6 +10,9 @@ def angle_to_sexigesimal(angle_in_degrees, decimals=3):
     angle_in_degrees : float
         A scalar angle, expressed in degrees
 
+    decimals : int
+        Number of decimals
+
     Returns
     -------
     hms_str : str
@@ -28,5 +31,5 @@ def angle_to_sexigesimal(angle_in_degrees, decimals=3):
 
     seconds = (min_num - minutes)*60
 
-    format_string = '{}:{}:{:.' + str(decimals) + 'f}'
+    format_string = '{}:{}:{}:.' + str(decimals) + 'f}'
     return format_string.format(hours, minutes, seconds)
